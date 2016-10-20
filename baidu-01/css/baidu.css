@@ -1,0 +1,94 @@
+/**
+ * 百度页面样式
+ */
+
+/* css reset */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+body{
+    font: 12px arial;
+    overflow: hidden;
+}
+.top-menu{
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    /* height: 50px;
+    float: right;
+    margin: 20px 15px 0px; */
+}
+.top-menu li{
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.top-menu li a{
+    color: #333;
+}
+.text-normal a{
+    font-weight: normal;
+}
+.top-menu li.more-btn{
+    margin: 0
+}
+.top-menu li.more-btn a{
+    background-color: #38f;
+    color: white;
+    text-decoration: none;
+    padding: 4px;
+}
+.main{
+    width: 645px;
+    height:150px;
+    margin:85px auto 0px;
+}
+.main img{
+    display: block;
+    margin: 0 auto;
+}
+.search-wp{
+    border: 1px solid #b6b6b6;
+    width: 539px;
+    height: 34px;
+    display: inline-block;
+}
+.search-wp input{
+    border:none;
+    height: 22px;
+    width: 500px;
+    margin-top: 6px;
+    margin-left: 9px;
+}
+.search-wp input:focus{
+    outline: none;
+}
+.search-btn{
+    background-color: #317ef3;
+    border:none;
+    height: 36px;
+    width: 100px;
+    font-size: 15px;
+    color: #fff;
+    position: relative;
+    left: -4px;
+    top: 1px;
+}
+.search-main-wp{
+    margin-top: 30px;
+}
+.footer{
+    width: 372px;
+    height: 37px;
+    margin: 200px auto;
+    text-align: center;
+}
+.about a{
+    margin-right: 15px;
+}
