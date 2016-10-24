@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		div{
+			width: 300px;
+			height: 200px;
+			background-color: #FF4400;
+		}
+		</style>
+	</head>
+	<body>
+		<input type="text" name="" id="myTxt" value="" />
+		<button id="myBtn">按钮</button>
+		<div id="myDiv"></div>
+		<form action="http://www.baidu.com" onsubmit="return submitForm()">
+			<input id="mobile" type="text" />
+			<input type="submit" value="提交表单"/>			
+		</form>
+		
+		
+		<script type="text/javascript">
+			var myTxt = document.getElementById('myTxt');
+			myTxt.onkeydown=function(){
+				var txt = this.value;
+				console.log(txt);
+			}
+			window.onload = function(){
+				console.log('page loaded');
+			}
+			
+			/*var myDiv=document.getElementById('myDiv');
+			myDiv.onmouseover = function(){
+				this.style.backgroundColor = 'pink';
+			}
+			myDiv.onmouseout = function(){
+				this.style.backgroundColor = '#FF4400';
+			}*/
+			
+			var myDiv=document.getElementById('myDiv');
+			window.onresize = function(){
+				var w = document.documentElement.clientWidth;
+				myDiv.style.width = w/2+'px';
+			}
+			function submitForm(){
+				var mobile = document.getElementById('mobile');
+				if(mobile.value ==''){
+					alert('用户手机号不能为空');
+					return false;
+				}
+			}
+			
+		</script>
+	</body>
+</html>
+

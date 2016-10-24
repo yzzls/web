@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/jQuery.css"/>
+	</head>
+	<body>
+		<div class="aaa">dasda</div>
+		<span id="test" title="aaa">span1</span>
+		<div><span>span2</span></div>
+		<button id="myBtn">my Btn</button>
+		<ul class="ttt">
+			<li class="not-1">time1</li>
+			<li>time2</li>
+			<li>time3</li>
+			<li>time4</li>
+			<li>time5</li>
+		</ul>
+		<p>Hello</p>
+		<p>Hello Again</p>
+		<div>
+			<span>And Again</span>
+		</div>
+		
+		<script src="js/jquery-3.1.1.js"></script>
+		<script type="text/javascript">
+		    
+		    
+		    $("p").next();
+		    // attr 设置或返回被选元素的属性值
+		    /*$('button').attr('class','divs');
+		    $('span').text();
+		    $('span').has('div').css('backgroundColor','red');*/
+		    //选择器
+//		    $('button').css('backgroundColor','red');
+		    //选择器         操作      属性                        值
+//			console.log(jQuery);
+            /*var span = document.getElementById('test');
+            span.title = 'abc';*/
+           
+//          $('#test').attr('title','def');
+            /*var myBtn = jQuery('#myBtn');            
+            console.log(myBtn[0]);*/
+//         var $span = $('span');
+//         console.log(span);
+//         $('body>span').css('background-color','green');
+			
+			/*var myBtn=document.getElementById('myBtn');
+			console.log(myBtn);*/
+			
+			//dom写法
+			/*var spans=document.getElementsByTagName('span');
+			var len=spans.length;  
+			for(var i=0;i<len;i++){
+				spans[i].title='hjk';
+			}*/
+			//jQuery写法
+//			$('span').attr('title','ghk');
+            //DOM写法
+            /*var span=document.getElementById('test');
+			console.log(span.className);*/
+			//jQuery写法
+			
+			//$('#test').removeAttr('title');
+			//console.log($('#test').attr('class'));
+//			$('#test').addClass('red');
+		</script>
+	</body>
+</html>

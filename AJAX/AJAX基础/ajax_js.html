@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<button id="sendBtn">send</button>
+		
+		<script>
+			var sendBtn = document.getElementById('sendBtn');
+			sendBtn.onclick = function() {
+				getData();
+			}
+			function getData(){
+				var xhr = new XMLHttpRequest();
+				xhr.open("get","../ajax_info/ajax_info.txt?t="+new Date().getTime(),true);  //清除缓存：末尾加 ？t=’ +new Data().getTime()
+	            xhr.send();
+	            
+	            xhr.onreadystatechange=function(){                   //ajax核心事件
+	            	if(xhr.readyState == 4 && xhr.status == 200){
+	//          		console.log(xhr.responseText);
+						document.body.innerHTML += xhr.responseText;  //把text中的内容显示到页面
+	            	}
+	            }
+			}
+			
+		</script>
+	</body>
+</html>

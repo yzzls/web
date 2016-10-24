@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>用户注册</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+
+	<div class="bod-wp">
+			<h1>用户注册</h1>
+		<hr>
+		<form action="../api/reg_login_insert.php" method="get">
+			<div>
+				账号：<input name="username" type="text">
+			</div>
+			<div>
+				密码：<input name="password" type="password">
+			</div>
+			<div>
+				邮箱：<input name="email" type="text">
+			</div>
+			<div>
+				性别：<label for="">男</label><input type="radio" name='gender' value="男"/>
+				      <label for="">女</label><input type="radio" name='gender' value="女"/>
+			</div>
+			<div>
+				学历：<select name="edu" id="">
+					    <option value="大专">大专</option>
+					    <option value="本科">本科</option>
+					    <option value="研究生">研究生</option>
+				      </select>
+			</div>
+			<div>
+				爱好：<label><input name="hobbies[]" value="旅游" type="checkbox"/>旅游</label>
+				      <label><input name="hobbies[]" value="音乐" type="checkbox"/>音乐</label>
+					  <label><input name="hobbies[]" value="健身" type="checkbox"/>健身</label>
+			</div>
+			<div>
+				介绍：
+				<br />
+				<textarea name="desc" id="" cols="20" rows="10"></textarea>
+			</div>
+			<div>
+				照片：<input type="file" name="pic" />
+			</div>
+			<div>
+				<input id="loginBtn" type="submit" value="立即注册">
+				<input type="reset" value="清空">
+				<input id="rets" type="button" value="返回">
+			</div>
+		</form>
+	</div>
+
+	<script src="../jQueryrr/jquery-3.1.1.js"></script> 
+	<script type="text/javascript">
+    	$('#rets').on('click',function(){
+    		location.href="main.html"
+    	})
+    </script>
+
+	
+</body>
+</html>

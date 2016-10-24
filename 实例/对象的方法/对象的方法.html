@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			var student ={
+				age:18,
+				gender:'男',
+				name:'张三',
+				read:function(action){
+					
+					action = action ||'读书';
+					
+					/*if(arguments.length==0){
+						action ='读书';
+					};*/
+					
+					/*if(!action){
+						action ='读书';
+					}*/
+					//console.log('张三正在读书。。。');
+					return '张三正在'+action +'。。。';
+				}
+			};			
+			var s =student.read('吃饭');
+			console.log(s);
+		</script>
+	</body>
+</html>

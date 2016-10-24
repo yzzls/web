@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/tab.css"/>
+	</head>
+	<body>
+		<div class="tab">
+			<ul>
+				<li class="on">time1</li>
+				<li>time2</li>
+				<li>time3</li>
+				<li>time4</li>
+				<li>time5</li>
+			</ul>
+			<div class="centent">
+				<div>centent1</div>
+				<div>centent2</div>
+				<div>centent3</div>
+				<div>centent4</div>
+				<div>centent5</div>
+			</div>
+		</div>
+		
+		<hr />
+		
+		<div class="tab tab2 mover">
+			<ul>
+				<li class="on">time1</li>
+				<li>time2</li>
+				<li>time3</li>
+			</ul>
+			<div class="centent">
+				<div>centent1</div>
+				<div>centent2</div>
+				<div>centent3</div>
+			</div>
+		</div>
+		<script src="../../jQueryrr/jquery-3.1.1.js"></script>
+		<script type="text/javascript">
+			/*function renderTabByClass(className){
+				var $target=$(className),
+				    $lis = $target.find('ul>li'),
+				    $divs = $target.find('.centent>div');
+				
+				$lis.on('click',function(){
+					var $this = $(this),
+					    index = $this.index();
+					$this.addClass('on').siblings('.on').removeClass('on');
+					$divs.eq(index).show().siblings().hide();
+				});
+			}
+			renderTabByClass('.tab');*/
+			
+			function renderTabByClass(className){
+				var $target=$(className);
+				
+				$target.each(function(i,obj){
+					var $obj = $(obj),
+					    $lis = $obj.find('ul>li'),
+				        $divs = $obj.find('.centent>div'),
+				        evt,
+				        isMouseover = false,
+				        timer;
+				    if($obj.hasClass('mover')){
+					    	evt = 'mouseover';
+					    	isMouseover = true;
+					    } else{
+					    	evt ='click';
+					    }
+					        
+					    $lis.on(evt,function(){
+							var $this = $(this),
+							    index = $this.index();
+							    
+							if(isMouseover) {
+								timer = setTimeout(function(){
+									doChangeTab();
+									/*$this.addClass('on').siblings('.on').removeClass('on');
+							        $divs.eq(index).show().siblings().hide(); */
+								},300);
+								$lis.on('mouseout',function(){
+									if(timer){
+										clearTimeout(timer);
+									}
+								});
+							} else{
+								doChangeTab();
+								/*$this.addClass('on').siblings('.on').removeClass('on');
+							    $divs.eq(index).show().siblings().hide();*/
+							}
+							
+							function doChangeTab() {
+								$this.addClass('on').siblings('.on').removeClass('on');
+							    $divs.eq(index).show().siblings().hide();
+							}
+						});	
+					//console.log(i);  当前索引
+				});
+				
+			};
+			renderTabByClass('.tab');
+		</script>
+	</body>
+</html>

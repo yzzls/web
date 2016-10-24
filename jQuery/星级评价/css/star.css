@@ -1,0 +1,33 @@
+html, body, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+.star-wp{
+	background-image: url(../img/star.png);
+	width: 110px;
+	height: 21px;
+}
+.star-5{
+	background-position: 0 0px;
+}
+.star-4{
+	background-position: 0 -24px;
+}
+.star-3{
+	background-position: 0 -49px;
+}
+.star-2{
+	background-position: 0 -74px;
+}
+.star-1{
+	background-position: 0 -98px;
+}
+.star-0{
+	background-position: 0 -123px;
+}
+.star-wp span{
+	float: left;
+	width: 21px;
+	height: 21px;
+}

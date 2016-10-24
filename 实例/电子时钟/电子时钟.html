@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<span id="timers">00:00:00</span>
+		
+		<script type="text/javascript">
+		function timers(){
+			var d = new Date(),
+			h,m,s=d.getSeconds(),
+			    
+			    timers= document.getElementById('timers');
+			setInterval(function(){
+				h = d.getHours();
+			    m = d.getMinutes();
+			    s = d.getSeconds();
+				d.setSeconds(++s);
+			    timers.innerHTML = fill(h)+':' + fill(m) + ':' +  fill(s); 				
+			},1000);
+		}
+		function fill(num){
+			if(num<10){
+				return '0'+num;
+			} else{
+				return num;
+			}
+		}
+			
+		timers();
+		
+		</script>
+	</body>
+</html>

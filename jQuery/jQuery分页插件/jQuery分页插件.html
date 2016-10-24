@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		    body{
+		    	font-family: "微软雅黑";
+		    	font-size: 14px;
+		    	color: #2064C8;
+		    	
+		    }
+		    a{
+		    	text-decoration: none;
+		    }
+			.spaned span{
+				padding: 4px 7px;
+				margin: 0 3px;
+				letter-spacing: 3px;
+			}
+			.spaned span.current{
+				border: 1px solid #2064C8;
+				border-radius: 2px;
+				background-color: #2064C8;
+				color: #fff;	
+				letter-spacing: 0;
+			}
+			.spaned a{
+				border: 1px solid #ccc;
+				padding: 4px 7px;
+				margin: 0 3px;
+				border-radius: 2px;	
+			}
+			.spaned span.disabled{
+				border: 1px solid #ccc;
+				border-radius: 2px;
+				background-color: #eee;
+				color: #ccc;
+				letter-spacing: 0;
+			}
+			.spaned a:hover{
+				border: 1px solid #2064C8;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="spaned"></div>
+		
+		<script src="../../jQueryrr/jquery-3.1.1.js"></script>
+		<script src="../../jQueryrr/jquery.page.js"></script>
+		<script>
+		
+		    $(".spaned").createPage({
+		        pageCount:100,
+		        current:1,
+		        backFn:function(p){
+		            //console.log(p);
+		        }
+		    });
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/star.css"/>
+	</head>
+	<body>
+		
+		<h1>各级别星级展示</h1>
+		
+		<hr />
+		<h3>5</h3>
+		<div class="star-wp star-5"></div>
+		<h3>4</h3>
+		<div class="star-wp star-4"></div>		
+		<h3>3</h3>
+		<div class="star-wp star-3"></div>
+		<h3>2</h3>
+		<div class="star-wp star-2"></div>
+		<h3>1</h3>
+		<div class="star-wp star-1"></div>
+		<h3>0</h3>
+		<div class="star-wp star-0"></div>
+		<hr />
+		
+		<h1>设定星级</h1>
+		<hr />
+		<h3>当前星级：<span id="level">0</span></h3>
+		<div id="starWp" class="star-wp star-0">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>		
+		</div>
+		<script src="../../jQueryrr/jquery-3.1.1.js"></script>
+		<script>
+			!function(window,document,$,undefined){
+				
+				var $starsWp = $('#starWp'),
+				    $stars = $starsWp.find('span');
+				
+				 $stars.on('mouseover',function(){
+				 	var $this = $(this),
+				 	    index = $this.index();
+				 	$starsWp.attr('class','star-wp star-' + ++index);
+				 	$('#level').text(index);
+				});	
+			}(window,document,jQuery);
+		</script>
+	</body>
+</html>

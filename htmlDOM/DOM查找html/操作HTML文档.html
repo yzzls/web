@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="myDiv">
+			<p id="myPs">hello word</p>
+		</div>
+		<button id="myBtn">点击</button>
+		
+		
+		
+		<script type="text/javascript">
+//			var myDiv=document.getElementById('myDiv');
+			//追加元素
+			/*var span=document.createElement('span');
+			var txt=document.createTextNode('my new span');
+			span.appendChild(txt);
+			
+			myDiv.appendChild(span);*/
+			
+			//点击增加1个
+            var myBtn=document.getElementById('myBtn');
+			    myBtn.onclick=function(){	
+			    	if(i<5){
+			    		var span=document.createElement('span');
+				        var txt=document.createTextNode('my new span');
+				    	span.appendChild(txt);
+				    	myDiv.appendChild(span);
+			    	} else{
+			    		myBtn.disabled = 'disabled';
+			    	}
+/*			    	var span=document.createElement('span');
+				    var txt=document.createTextNode('my new span');
+				    span.appendChild(txt);
+				    myDiv.appendChild(span);*/
+				
+				//追加10个
+		    /*var myBtn=document.getElementById('myBtn');
+			    for(var i=0; i<10; i++){
+			    	var span=document.createElement('span');
+				    var txt=document.createTextNode('my new span'+i);
+					span.appendChild(txt);
+					myDiv.appendChild(span);	
+			    }*/
+			   
+			   //删除元素
+			/*var myDiv=document.getElementById('myDiv');			   
+			var myPs=document.getElementById('myPs');
+			   
+			   var myBtn=document.getElementById('myBtn');
+			    myBtn.onclick=function(){
+			    	//myDiv.removeChild(myPs);
+                    //console.log(myPs); //子节点
+                    //console.log(myPs.parentNode);  //父节点
+                    //myPs.parentNode.removeChild(myPs);  //用子节点找到父节点再把自己删掉
+                    
+			    }*/
+			   
+			   //插入元素
+/*			    var myBtn=document.getElementById('myBtn');
+			    myBtn.onclick=function(){
+			    	var h1=document.createElement('h1');
+				    var txt=document.createTextNode('my new span');
+			    	h1.appendChild(txt);
+			    	
+			    	myDiv.insertBefore(h1,myPs);
+			    	
+			    	//替换元素
+			    	myDiv.replaceChild(h1,myPs);
+
+
+
+
+			    }*/
+			   
+		</script>
+	</body>
+</html>

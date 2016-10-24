@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>原生js实现tab</title>
+		<link rel="stylesheet" href="css/tab.css" />  <!--引用外部css-->
+	</head>
+	<body>
+	
+	    <div class="tab-wp">
+	    	<div id="tabHeader" class="tab-header">
+	    		<a class="on" href="javascript:;">政治</a>
+	    		<a href="javascript:;">军事</a>
+	    		<a href="javascript:;">新闻</a>   <!-- javascript:;  阻止页面跳转-->
+	    		<a href="javascript:;">历史</a>
+	    	</div>
+	    	<div id="tabBody" class="tab-body">
+	    	    <div class="on">111</div>
+	    	    <div>222</div>
+	    	    <div>333</div>
+	    	    <div>444</div>
+	    	</div>
+	    </div>
+	<!--分析程序入口：点击上面的项目使下面的内容改变 -->                            
+	<script>
+	    var renderTab =function(){            //使所有的事件都放到这个函数中
+	    	var tabHeader = document.getElementById('tabHeader'),   //通过id得到外层父级元素（div）
+	    	    tabBody = document.getElementById('tabBody'),       //通过id得到内容的标签父级元素（div）   
+	    	    tabAs = tabHeader.getElementsByTagName('a'),        //通过标签名得到子集元素（a）
+	    	    tabDivs = tabBody.getElementsByTagName('div'),      //通过标签名得到子集元素（div）
+	    	    len =tabAs.length;                                  //声明元素a的长度是len
+	    	
+	    	if(tabAs.length != tabDivs.length){                     //tabAs.length 与  tabDivs.length的个数比需是相等的
+	    		return;
+	    	}
+	    	    
+	    	for(var i=0; i<len; i++){                             //遍历数组  给每个a绑点击事件
+	    		tabAs[i].setAttribute('index', i);                //setAttribute 增加一个自定义属性     index是索引     i是值
+	    		tabAs[i].onclick = function(){	                 //每个被点击都会做着个函数
+	    			var currIndex = this.getAttribute('index');     //当前的索引值是？？  得到tabAs的index属性
+	    
+	    			for(var j=0;j<len;j++){                      //清除所有的a元素的样式用for循环
+	    				tabAs[j].className='';                   //使className为空  就会清除所有的样式
+	    				tabDivs[j].className='';                 //使className为空   使内容都隐藏掉
+//	    				tabDivs[j].style.display='none'; 
+	    			}
+	    			this.className = 'on';                     //this： 指的是每个a标签    上面的函数使所有的a标签都没有了样式，所以就只会显示被点击的
+	    			tabDivs[currIndex].className ='on';        //tabDivs是个类数组结构，currIndex是项目第几个，他的className会显示。
+	    		}
+	    	}
+	    	   
+	    };
+	    window.onload =renderTab;
+	
+	</script>
+	
+	</body>
+</html>

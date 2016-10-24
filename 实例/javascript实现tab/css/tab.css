@@ -1,0 +1,43 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+
+ul,li{
+   list-style: none;
+}
+a{
+   text-decoration: none;
+}
+.tab-wp{
+   width: 500px;
+   background-color: #ccc;
+}
+.tab-wp .tab-header{
+    background-color: #fff;
+}
+.tab-wp .tab-header a {
+    float: left;
+    margin-right: 10px;
+    width: 60px;
+    height: 45px;
+    line-height: 45px;
+    color: #000;
+    text-align: center;
+}
+.tab-wp .tab-header a.on{
+    background-color: #000;
+    color:#fff;
+}
+.tab-wp .tab-header:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+.tab-body div{
+    height: 300px;
+    display: none;
+}
+.tab-body div.on{
+    display: block;
+}

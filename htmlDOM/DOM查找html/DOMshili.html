@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="myBtn">点击</button>
+		<ul id="myUl">
+			<li>time0</li>
+			<li>time1</li>			
+			<li>time2</li>			
+			<li>time3</li>
+			<li>time4</li>
+			<li>time5</li>
+			
+		</ul>
+		<li>4556</li>
+		
+		<script type="text/javascript">
+			var myUl=document.getElementById('myUl');
+			
+			var myBtn=document.getElementById('myBtn');
+			    myBtn.onclick=function(){
+//			    	var lis=document.getElementsByTagName('li')   //得到页面所有的li元素
+			    	var lis=myUl.getElementsByTagName('li')       //得到ul父元素里面的li元素
+//			    	var lis=myUl.childNodes;                      //得到ul里面的文本节点（回车&换行）和li元素
+//			    	var lis=myUl.children;                      //得到ul里面的li元素/父元素里的子元素(有浏览器兼容问题)
+			    	lis[0].style.color='red'   //lis得到的是一个类数组没法样式只能是给DOM对象设置样式
+			    	
+			    	//使lis统一设置颜色样式
+			    	for(var i=0;i<lis.length;i++){
+			    		lis[i].style.color='red'
+			    	}
+			    	//使lis设置不同颜色样式
+			    	for(var i=0;i<lis.length;i++){
+			    		if(i%2==0){
+			    			lis[i].style.color='red'
+			    		} else{
+			    			lis[i].style.color='green'
+			    			
+			    		}
+			    		
+			    	}
+			    	console.log(lis);
+			    }
+			
+			
+		</script>
+	</body>
+</html>

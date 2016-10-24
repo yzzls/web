@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		
+		<ul id="navMenu" class="nav-menu">
+			<li class="on">item1</li>
+			<li>item2</li>
+			<li>item3</li>
+			<li>item4</li>
+			<li>item5</li>
+		</ul>
+		<!--<select id="sel" name="">
+			<option value="北京">北京</option>
+			<option value="天津">天津</option>
+			<option value="上海">上海</option>
+			
+		</select>
+		<input id="txt" type="text" value="sadadw" />
+		<button>get val</button>
+		<div class="header">显示</div>
+		<div id="" class="content">内容内容</div>-->
+		<script src="js/jquery-3.1.1.js"></script>
+		<script type="text/javascript">
+		
+		var $li = $('#navMenu li');
+		$li.on('click',function(){
+			var $this = $('this');
+//			console.log($this.siblings());
+			$(this).addClass('on').siblings().removeClass('on');
+		})
+		    //用jquery绑定事件 
+			/*$('.header').on('click',function(){
+				var $this = $(this);*/
+				/*if(this.innerHTML=='显示'){
+					this.innerHTML=='隐藏';
+				} else{
+					this.innerHTML=='显示';
+				}*/
+				/*var $content = $('.content');  //声明jquery  有利于优化
+				
+				$content.toggleClass('show');
+				if($content.hasClass('show')){
+					this.innerHTML = '隐藏';
+				} else{
+					this.innerHTML = '显示';
+				}
+			});*/
+			
+			/*var $btn =$('button');
+			$btn.on('click',function(){
+//				alert($('#txt').val('hgdutfi'));
+//              $('#txt').val('');
+                alert($('#sel').val());
+			})*/
+		</script>
+	</body>
+</html>

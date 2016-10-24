@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/lina.css" />
+	</head>
+	<body>
+		<button>按钮</button>
+		<div class="div-1"></div>
+		
+		<script src="../../jQueryrr/jquery-3.1.1.js"></script>
+		<script type="text/javascript">
+			!function(window,document,$,undefined){
+				$('button').on('click',function(){	
+					
+					/*$('.div-1').css({
+						'background-color':'blue',
+						'width': '100px',
+						'height': '100px'
+					});*/
+					
+					var param = {
+						'margin-left': '500px',
+						'height' : '100px',
+						'width' : '100px',
+						'border-radius' : '70px'
+					};
+					$('.div-1').animate(param,2000,function(){
+						var $this = $(this);
+						$this.css('backgroundColor', 'blue');
+						$(this).animate({'margin-left': 0}, 2000);
+					});
+					
+					//$('.div-1').animate({marginLeft: '500px'},5000);
+					
+					//$('.div-1').fadeTo(5000,0.5);
+					
+					/*if($('.div-1:hidden').length > 0){
+						$('.div-1').fadeIn(5000);
+					} else {
+						$('.div-1').fadeOut(5000);
+					}*/
+					
+				 	//$('.div-1').slideUp();
+				 	
+//					$('.div-1').toggle(3000);
+					
+					/*if($('.div-1:hidden').length > 0){
+						$('.div-1').show(5000);
+					} else {
+						$('.div-1').hide(5000);
+					}*/
+					//console.log($('.div-1:visible'));
+					
+					/*$('.div-1').hide('slow',function(){
+						alert('diasndhihxw');
+					});*/
+				});
+				
+				
+			}(window,document,jQuery);
+		</script>
+	</body>
+</html>

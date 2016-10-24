@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<select id="mySel" name="">
+			<option value="">请选择</option>
+		</select>
+		
+		<button id="myBtn">生成</button>
+		
+		<script>
+			var arr=['故宫','长城','香山','天坛','十三陵','圆明园','颐和园'];
+			
+			var mySel=document.getElementById('mySel');
+			var myBtn=document.getElementById('myBtn');
+			myBtn.onclick = function(){
+				var opArr=['<option value="">请选择</option>'];
+				var len=arr.length;
+				for(i=0;i<len;i++){
+					opArr.push('<option>'+arr[i]+'</option>');
+				}
+				mySel.innerHTML = opArr.join('');
+			}
+		</script>
+	</body>
+</html>

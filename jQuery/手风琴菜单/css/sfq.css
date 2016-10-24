@@ -1,0 +1,25 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #333;
+}
+ul,li{
+	list-style: none;
+}
+.sfq{
+	width: 360px;
+	background-color: #fff;
+	margin: 50px auto;
+}
+.sfq li{
+	background-color: #777;
+	color: #fff;
+}
+.sfq li:hover{
+	background-color: red;
+}
+.item ul{
+	display: none;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="testDiv">
+			
+		</div>
+		
+		<script>
+			test();
+		    function test(){
+		    	console.log(this);   //window  ??
+			}
+			var test2 ={
+				name:'abc',
+				hello:function(){
+					console.log(this.hello);
+				}
+				
+			};
+			test2.hello();  
+			
+		</script>
+	</body>
+</html>

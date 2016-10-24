@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.text{
+				font-size:20px;
+				color:#f40;
+			}
+			.text2{
+				font-size:20px;
+				font-weight: 600;
+				color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="myDiv" class="text">
+			<span>我是div</span>
+		</div>
+		<span class="text">my span0</span>
+		<span>my span1</span>
+		<span>my span2</span>
+		<span>my span3</span>
+		<span>my span4</span>
+		<form action="">
+			<input type="text" name="user" class="text"/>
+			<input type="text" name="passwoed" />		
+		</form>
+		
+		
+		<script type="text/javascript">
+		          //innerHTML和innerText都是DOM对象的一个方法，
+		          //都能得到DOM对象里面的一些内容，如果给两个赋
+		          //值都是改变DOM里面的内容，如果直接访问属性就得到
+			//var myDiv=document.getElementById('myDiv');
+			//myDiv.innerHTML = '<h1>woshiwenben</h1>'     //  innerHTML可以解析里面的HTML标签， 如果是得到innerHTML可以得到里面的标签。
+			//myDiv.innerText = '<h1>woshiwenben</h1>'     //  innreText只认为是文本，如果是得到innerText可以过滤标签只显示内容。
+			//var myDiv=document.getElementById('myDiv');			
+//			console.log(myDiv.innerHTML);    
+//			console.log(myDiv.innerText);	 	
+			var myDiv=document.getElementById('myDiv');
+			myDiv.className='text2';
+			myDiv.style.fontSize='50px';
+			myDiv.style.color='#0053A3';
+			
+			
+/*			var mySpan=document.getElementsByTagName('span');		
+			console.log(mySpan[1]);
+			
+			mySpan.className='text2';*/
+//			var user=document.getElementsByName('user')
+//			console.log(user);
+			
+		</script>
+	</body>
+</html>

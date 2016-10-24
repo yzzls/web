@@ -1,0 +1,124 @@
+*{
+	margin: 0;
+	padding: 0;	
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.sprite1{
+	background-image: url(../img/aoyun-code.png);
+}
+.sprite{
+	position: relative;
+	background-image: url(../img/sidebaricon.png);
+	display: inline-block;
+	width: 35px;
+	height: 30px;
+	z-index: 2;
+	background-color: #383838;
+}
+.r-nav-bar{
+	background-color: #383838;
+	width: 35px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+.r-nav-bar .menu {
+	position: absolute;
+	bottom: 130px;
+}
+.r-nav-bar .menu>.menu1{
+	position: relative;
+	z-index: 80;
+}
+.r-nav-bar .menu>.menu1>div:hover i{
+	background-color: #ffaa01;
+}
+
+.bag.sprite {
+	background-position: 0 -47px;
+}
+.r-nav-bar .menu>.menu1>div:hover .bag.sprite{
+	background-position: -26px -47px;
+}
+
+.foot.sprite {
+	background-position: 0 -70px;
+}
+.r-nav-bar .menu>.menu1>div:hover .foot.sprite{
+	background-position: -26px -70px;
+}
+
+.sign-in.sprite{
+	background-position: 0 -93px;
+}
+.r-nav-bar .menu>.menu1>div:hover .sign-in.sprite{
+	background-position: -26px -93px;
+}
+
+.feedb.sprite{
+	background-position: 0 -138px;
+}
+.r-nav-bar .menu>.menu1>div:hover .feedb.sprite{
+	background-position: -26px -138px;
+}
+
+.qr.sprite{
+	background-position: 0 -164px;
+}
+.r-nav-bar .menu>.menu1>div:hover .qr.sprite{
+	background-position: -26px -164px;
+}
+
+.return-top.sprite{
+	background-position: 0 -187px;
+}
+.r-nav-bar .menu>.menu1>div:hover .return-top.sprite{
+	background-position: -26px -187px;
+}
+.r-nav-bar .menu>.menu1>div{
+	position: relative;
+}
+.r-nav-bar .menu>.menu1>div>span{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	line-height: 33px;
+    font-size: 12px;
+    text-align: center;
+    height: 30px;
+    width: 47px;
+    background-color: #383838;
+    color: #ffaa01;
+}
+.r-nav-bar .menu>.menu1>div.feedbs>span,.r-nav-bar .menu>.menu1>div.return>span {
+	width: 73px;
+}
+.r-nav-bar .menu>.menu1>div:hover span{
+    background-color: #ffaa01;
+	color: #000000;
+}
+.r-nav-bar .menu>.menu1>div>span.qr-code.sprite1 {
+	position: absolute;
+	top: -206px;
+	left: 0px;
+    height: 236px;
+    width: 160px;
+    background-color: transparent;
+    z-index: -9;
+}
+.r-nav-bar .menu>.menu1>div>span.qr-code.sprite1 img{
+	display: block;
+    width: 134px;
+    height: 134px;
+    margin: 58px auto 0;
+}
+.r-nav-bar .menu .kongge{
+	height: 30px;
+	width: 35px;
+}

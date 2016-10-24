@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>用户登录</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+
+	<div class="bod-wp">
+		<h1>用户登录</h1>
+		<hr>
+	<form action="../api/reg_login_enter.php" method="post">
+		<div>
+			账号：<input name="username" type="text">
+		</div>
+		<div>
+			密码：<input name="password" type="password">
+		</div>
+		<div>
+			<label>验证码：<input type="text" name="vcode"/></label>
+			<img title="点击刷新" src="vcode/captcha.php" align="absbottom" onclick="this.src
+				='vcode/captcha.php?' + Math.random();"/>
+		</div>
+		
+		<div>
+			<input id="loginBtn" type="submit" value="登录">
+			<input type="reset" value="清空">
+			<input id="ret" type="button" value="返回">
+		</div>
+	</form>
+	</div>
+
+	<script src="../jQueryrr/jquery-3.1.1.js"></script> 
+    <script type="text/javascript">
+    	$('#ret').on('click',function(){
+    		location.href="main.html"
+    	})
+    </script>
+	
+</body>
+</html>

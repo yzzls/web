@@ -1,0 +1,42 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,li{
+	list-style: none;
+}
+
+.bod-wp{
+	width: 600px;
+	height: 100%;
+	margin: 30px auto 0;
+}
+div{
+	margin: 10px;
+}
+input {
+       
+}
+input[type="text"],input[type="password"] {
+    border: 1px solid #666;
+    border-radius: 2px;
+    width: 200px;
+    height: 20px;  
+}
+input[type="text"][name="vcode"]{
+	width: 100px;
+    height: 20px;
+}
+input[type="submit"] {
+    width: 150px;
+    height: 50px;
+    background-color: #28A4C9;  
+    border-radius: 2px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-family:"微软雅黑" ;
+}
+.jies{
+	
+}
